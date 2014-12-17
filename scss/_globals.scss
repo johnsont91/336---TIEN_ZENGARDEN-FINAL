@@ -1,0 +1,54 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+/* latin */
+@mixin body-font-regular {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+/* latin */
+@mixin body-font-bold {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 700;
+
+}
+/* latin */
+@mixin body-font-italic {
+  font-family: 'Marvel';
+  font-style: italic;
+  font-weight: 400;
+
+}
+
+/* latin */
+@mixin body-font-goudy{
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal;
+  font-weight: 400;
+
+}
+/* latin */
+@mixin headline-font {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+
+}

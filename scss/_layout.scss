@@ -1,0 +1,161 @@
+/* 
+Layout Rules
+    CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles.
+    Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate.
+*/
+
+.intro {
+    width: 100%;
+    max-width: 1000px;
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            max-width: 550px;
+    }
+}
+.sidebar {
+    background-color: #c7c7c7;
+    position: absolute;
+    width: 100%;
+    max-width: 220px;
+    top: -20px;
+   // left: 390px;
+    border: 1px;
+    right: 220px;
+    @media screen and (max-width: $tablet) {
+        position: absolute;
+        text-align: justify;
+        right: 280px;
+        top: 1420px;
+        width: 100%;
+        max-width: 200px;
+        }
+    @media screen and (max-width: $mobile) { 
+                    padding: 15px;
+                   // margin-top: 52px;
+                 //   margin-left: 135px;
+        @include fontSize(16px);
+        max-width: 180px;
+        left: 235px;
+        top: 1420px;
+    }
+    
+}
+
+.sidebar h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;   
+    padding: 0px;
+    text-align: justify;
+    text-decoration: none;
+    text-decoration-color: #cecece;
+    @include fontSize(12px);
+}
+
+.page-wrapper {
+    left: 100px;
+    position:relative; 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+     @media screen and (max-width: $tablet) {
+        width: 100%;
+        
+    }
+             @media screen and (max-width: $mobile) {
+                 left: 0;
+                 max-width: 550px;
+        } 
+}
+
+.intro h2 {
+    background-color: #717171;
+    top: 60px;
+    right: 500px;
+  //  left: 0px;
+    position: absolute; 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.summary {
+    @include fontSize(17px);
+    position: static;
+    margin: 35px;
+    //top: 0;
+   // bottom: 0;
+    right: 1000px;
+    //left: 150px;
+    text-align: center;
+}
+
+.explanation h3 {
+    text-align: center;
+    padding: 10px;
+    margin-left: 200px;
+    margin-top: -30px;
+    position: static;
+    
+}
+
+.explanation p {
+    text-align: center;
+    padding: 10px;
+    position: static;
+    
+}
+
+.participation h3 {
+     text-align: center;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: -20px;
+    position: static;
+    
+}
+
+.benefits {
+    background-color: #517ed4;
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    top: 900px;
+    right: 370px;
+}
+
+.requirements {
+    background-color: #517ed4;
+    position: static;
+ //   width: 100%;
+    max-width: 100px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+footer {
+    display: inline-block;
+    margin: 0;
+     @media screen and (max-width: $tablet) {
+        position: absolute;
+        text-align: justify;
+        right: 280px;
+        top: 1820px;
+        width: 100%;
+        max-width: 200px;
+        }   
+         @media screen and (max-width: $mobile) {
+        position: absolute;
+        text-align: justify;
+        top: 1820px;
+        right: -60px;  
+        width: 100%;
+        max-width: 200px;
+        }   
+}

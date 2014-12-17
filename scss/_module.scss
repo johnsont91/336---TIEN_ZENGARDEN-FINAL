@@ -1,0 +1,427 @@
+/* 
+Module Rules
+    A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
+    When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
+*/
+
+.intro h1 {
+    @include headline-font;
+    @include fontSize(50px);
+    background-color: #434343;
+    color: #51e2a4;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+    }
+        @media screen and (max-width: $mobile) {
+        @include fontSize(20px);
+        position: static;
+        max-width: 550px;
+    }
+}
+
+.intro h2 {
+    @include headline-font;
+    @include fontSize(24px);
+    color: #fff;
+    background-color: #4a70a3;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    left: 50px;
+    @media screen and (max-width: $tablet) {
+     //   position: static;
+        width: 100%;
+        left: 0;
+        right: 300px;
+        max-width: 300px;
+    }
+            @media screen and (max-width: $mobile) {
+        @include fontSize(16px);
+        position: static;
+        max-width: 500px;
+        margin-bottom: -10px;
+    }
+}
+
+.intro p {
+    @include body-font-regular;
+    @include fontSize(24px);
+                @media screen and (max-width: $mobile) {
+        @include fontSize(16px);
+        max-width: 460px;
+    }
+        @media screen and (max-width: $mobile) {
+        @include fontSize(15px);
+        margin-top: 0;
+        position: static;
+        max-width: 550px;
+    }
+}
+
+
+.sidebar {
+    margin: 0px;   
+    padding-left: 10px;
+    @include fontSize(24px);
+    @include body-font-regular;
+  //  padding-right: -30px;
+     @media screen and (max-width: $mobile) { 
+    padding: 5px;
+         text-align: justify;
+     }
+        @media screen and (max-width: $mobile) {
+        @include fontSize(20px);
+        position: static;
+        max-width: 550px;
+        text-align: center;
+            margin: 0;
+             margin-top: 50px;
+      //  padding: 0;
+    }
+}
+
+.sidebar .design-selection ul li {
+          @media screen and (max-width: $mobile) {
+        @include fontSize(15px);
+        position: static;
+        max-width: 550px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-left: -40px;
+    }  
+}
+
+.sidebar .design-archives ul li {
+          @media screen and (max-width: $mobile) {
+        @include fontSize(15px);
+        position: static;
+        max-width: 550px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-left: -40px;
+    }  
+}
+
+
+.sidebar .zen-resources ul li {
+          @media screen and (max-width: $mobile) {
+        @include fontSize(15px);
+        position: static;
+        max-width: 550px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-left: -40px;
+    }  
+}
+.summary {
+    background-color: #72afff;
+    max-width: 100%;
+    padding: 30px;
+    width: 35%;
+        @media screen and (max-width: $tablet) {
+            position: static;
+            max-width: 400px;
+            text-align: center;   
+    }
+            @media screen and (max-width: $mobile) { 
+                padding: 10px;
+                margin-top: 22px;
+                margin-left: 135px;
+        @include fontSize(16px);
+        max-width: 460px;
+    }
+}
+
+
+
+.preamble {
+    background-color: #5addb7;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin-top: -50px;
+    }
+                    @media screen and (max-width: $mobile) { 
+                    padding: 25px;
+                   // margin-top: 22px;
+                   // margin-left: 30px;
+        @include fontSize(16px);
+        max-width: 550px;
+    }
+}
+
+.preamble h3 {
+    @include fontSize(25px);
+    @include body-font-regular;
+    color: #525252;
+    padding: 0;
+            @media screen and (max-width: $mobile) {
+        @include fontSize(30px);
+        max-width: 350px;
+        margin: 0;
+        text-align: center;
+    }
+}
+.preamble p {
+    @include fontSize(15px);
+    @include body-font-regular;
+    color: #525252;
+        @media screen and (max-width: $mobile) {
+        @include fontSize(15px);
+        max-width: 350px;
+        text-align: center;
+    }
+}
+.explanation h3 {
+    @include fontSize(24px);
+    @include body-font-bold;
+    background-color: #f7aded;   
+    max-width: 180px;
+    padding: 20px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+    }
+}
+
+.explanation p {
+    @include body-font-regular;
+    @include fontSize(16px);
+    background-color: #ffd9f8;   
+    max-width: 500px;
+    padding: 20px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        max-width: 380px;
+    }
+    @media screen and (max-width: $mobile) { 
+        @include fontSize(16px);
+        margin: 0;
+        max-width: 360px;
+    }
+}
+
+.participation h3{
+    @include headline-font;
+    @include fontSize(30px);
+    color: #313131;
+    background-color: #ffc5e6;   
+    max-width: 400px;
+    padding: 20px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 0px;
+    }
+                        @media screen and (max-width: $mobile) { 
+                            margin-top: -10px;
+                        }
+}
+
+.participation p {
+    @include body-font-regular;
+    @include fontSize(18px);
+    background-color: #f0f0f0;   
+    max-width: 250px;
+    padding: 5px;
+    width: 100%;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        padding: 5px;
+        max-width: 300px;
+        margin-left: 50px;
+        margin-top: -10px;
+        }
+            @media screen and (max-width: $mobile) {
+                margin-left: 10;
+                @include fontSize(20px);
+                max-width: 300px;
+                text-align: center;
+                position: static;
+    }
+    }
+
+.benefits {
+    background-color: #84dbc5;   
+    max-width: 300px;
+    padding: 20px;
+    width: 100%;
+        @media screen and (max-width: $tablet) {
+            position: absolute;
+            text-align: justify;
+            right: 280px;
+            top: 1190px;
+            width: 100%;
+            max-width: 200px;
+        }
+            @media screen and (max-width: $mobile) { 
+                position: static;
+                right: 0;
+                top: 0;
+                @include fontSize(16px);
+                max-width: 550px;
+                text-align: center;
+    }
+    }
+
+.benefits h3 {
+    @include headline-font;
+    @include fontSize(24px);
+    color: #363636;
+    padding: 0;
+    @include fontSize(20px);
+             @media screen and (max-width: $mobile) { 
+                position: static;
+                @include fontSize(26px);
+                max-width: 350px;
+                text-align: center;
+    }
+}
+.benefits p {  
+     @include body-font-bold;
+    @include fontSize(18px);
+    max-width: 500px;
+    padding: 5px;
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        max-width: 200px;
+        }
+                @media screen and (max-width: $mobile) { 
+                position: static;
+                right: 0;
+                top: 0;
+                @include fontSize(16px);
+                max-width: 350px;
+                text-align: center;
+    }
+    }
+
+.requirements {
+    background-color: #7b7b7b;   
+    max-width: 500px;
+    padding: 20px;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        max-width: 200px;
+        @include fontSize(10px);
+        }
+             @media screen and (max-width: $mobile) { 
+                position: static;
+                @include fontSize(30px);
+                max-width: 550px;
+                text-align: center;
+    }
+    }
+.requirements h3 {
+    @include headline-font;
+    @include fontSize(30px);
+    color: #e5e5e5;
+    text-align: center;
+      @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        max-width: 200px;
+        @include fontSize(20px);
+        }
+             @media screen and (max-width: $mobile) { 
+                position: static;
+                @include fontSize(30px);
+                max-width: 350px;
+                text-align: center;
+    }
+}
+.requirements p {
+     @include body-font-regular;
+    @include fontSize(18px);
+    max-width: 600px;
+    padding: 4px;
+    color: #cecece;
+    @media screen and (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        }
+             @media screen and (max-width: $mobile) { 
+                position: static;
+                @include fontSize(16px);
+                max-width: 350px;
+                text-align: center;
+    }
+    }
+
+
+footer a {  
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    @media screen and (max-width: $desktop) {
+//    position: static;
+//    bottom: 600px;
+//    right: -300px;
+    }
+        @media screen and (max-width: $tablet) {
+        padding: 10px;
+        width: 15px;
+        background-size: 30px;
+        margin-top: 0px;
+            bottom: 0;
+            right: 0;
+        }
+          @media screen and (max-width: $mobile) { 
+              position: relative;
+                padding: 10px;
+                width: 15px;
+                background-size: 30px;
+                margin-top: -8px;
+                right: 145px;
+              bottom: 0;
+                
+          }
+}
+
+footer .zen-validate-html {
+    color: rgba(255, 255, 255, 0); 
+    background-image: url('images/html.svg');
+
+}
+
+footer .zen-validate-css {
+    color: rgba(255, 255, 255, 0); 
+    background-image: url('images/css.svg');
+}
+footer .zen-license {
+    color: rgba(255, 255, 255, 0); 
+    background-image: url('images/creative.svg');
+}
+footer .zen-accessibility {
+    color: rgba(255, 255, 255, 0); 
+    background-image: url('images/setting.svg');
+}
+footer .zen-github {
+    color: rgba(255, 255, 255, 0); 
+    background-image: url('images/github.svg');
+}
+
+.page-wrapper {
+  margin: 0 auto;   
+}
